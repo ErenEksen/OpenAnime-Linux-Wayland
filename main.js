@@ -154,7 +154,8 @@ if (hasNvidiaHardware) {
 
 app.commandLine.appendSwitch("enable-features", featureList.join(","));
 app.commandLine.appendSwitch("disable-gpu-sandbox");
-app.commandLine.appendSwitch("gpu-preference", "high-performance");
+// app.commandLine.appendSwitch("gpu-preference", "high-performance");
+app.commandLine.appendSwitch("force-high-performance-gpu");
 app.commandLine.appendSwitch("enable-gpu-rasterization");
 if (config.forcePrimeOffload !== true) {
   app.commandLine.appendSwitch("enable-zero-copy");
